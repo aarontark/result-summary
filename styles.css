@@ -206,7 +206,7 @@ span {
     background-color: var(--Cobalt-blue);
 }
 
-@media all and (min-width: 375px){
+@media all and (min-width: 768px){
     body {
         display: flex;
         flex-direction: row;
