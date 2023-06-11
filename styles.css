@@ -1,0 +1,247 @@
+/* general styling */
+:root {
+    --Light-red: hsla(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    --Light-slate-blue-background: hsl(252, 100%, 67%);
+    --Light-royal-blue-background: hsl(241, 81%, 54%);
+    --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+    --Persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+@font-face {
+    font-family: "Hanken Grotesk";
+    src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 23.4375rem;
+}
+
+
+
+/* result section */
+
+.visual-section {
+    text-align: center;
+    background: linear-gradient(to bottom, var(--Light-slate-blue-background), var(--Light-royal-blue-background));
+    color: #FFF;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0 0 2rem 2rem;
+}
+
+.title {
+    margin: 1.5rem 0 1.5rem 0;
+    color: var(--Light-lavender);
+    font-size: 1.12rem;
+}
+
+.score-section {
+    background: rgb(78,33,202);
+    background: linear-gradient(to bottom, var(--Violet-blue-circle), var(--Persian-blue-circle));
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.overall-score {
+    font-size: 5rem;
+    font-weight: 800;
+}
+
+.out-of-score {
+    color: var(--Light-lavender);
+    margin-top: -.5rem;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+}
+
+.percentage {
+    width: 72%;
+    color: var(--Light-lavender);
+    margin-top: .5rem;
+    margin-bottom: 2rem;
+}
+
+
+/* info section */
+
+.info-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin: 2rem 6rem 2rem 6rem;
+}
+
+.summary {
+    font-weight: 700;
+    color: var(--Dark-gray-blue);
+    margin-top: -.5rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    font-size: 1.12rem;
+}
+
+.scoreset {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.scores {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem 1rem 1rem 1rem;
+    border-radius: 1rem;
+}
+
+.scores.react {
+    background: hsla(0, 100%, 67%, .1);
+}
+
+.scores.mem {
+    background: hsla(39, 100%, 56%, .1)
+}
+
+.scores.verb {
+    background: hsla(166, 100%, 37%, .1);
+}
+
+.scores.vis {
+    background-color: hsla(234, 85%, 45%, .1);
+}
+.score-title {
+    display: flex;
+}
+
+.score-title-text {
+    text-align: left;
+    margin-left: 1.5rem;
+    font-weight: 700;
+}
+
+.score-title.reaction {
+    color: var(--Light-red);
+}
+
+.score-title.memory {
+    color: var(--Orangey-yellow);
+}
+
+.score-title.verbal {
+    color: var(--Green-teal);
+}
+
+.score-title.visual {
+    color: var(--Cobalt-blue);
+}
+
+.fraction {
+    font-weight: 700;
+}
+
+span {
+    opacity: 50%;
+}
+
+.btn-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.continue-button {
+    background-color: var(--Dark-gray-blue);
+    color: white;
+    width: 90%;
+    font-size: 1.12rem;
+    font-weight: 700;
+    padding: 1rem 1rem 1rem 1rem;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+}
+
+.continue-button:hover {
+    background-color: var(--Cobalt-blue);
+}
+
+@media all and (min-width: 375px){
+    body {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    
+    .result-summary {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        max-width: 42rem;
+        background: #fff;
+        box-shadow: -2px 22px 45px -21px rgba(0,0,0,0.43);
+        border-radius: 2rem;
+    }
+
+    .info-section {
+        width: 1000px;
+        margin: 0;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .visual-section {
+        border-radius: 2rem;
+        width: 1000px;
+        height: 28rem;
+        margin: 0;
+    }
+    .score-section {
+        width: 12rem;
+        height: 12rem;
+    }
+    .subtitle {
+        margin-top: 2.5rem;
+    }
+}
